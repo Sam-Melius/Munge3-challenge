@@ -18,7 +18,8 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const names = arr.filter(pet => pet.type === 'dog');
+    return names;
 }
 
 /*
@@ -27,7 +28,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogs = arr.filter(pet => pet.type === 'dog')
+        .map(dogs => dogs.name);
+    return dogs;
 }
 
 
@@ -77,7 +80,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return arr.map(item => {
+    return arr.map(item => {
         // here we make a copy of our item. This is to prevent you from mutating the test array.
         const copyOfItem = { ...item };
 
