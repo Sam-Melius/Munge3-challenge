@@ -93,7 +93,7 @@ export function makeArrayWithIsHungry(arr) {
         // do stuff here. If you use mutation, please only mutate the copy. Otherwise you will end up with stateful problems in your tests.
 
         return copyOfItem;
-    })
+    });
 }
 
 /*
@@ -107,7 +107,8 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shout = arr.filter(pet => pet);
+    return shout;
 }
 
 
@@ -131,7 +132,9 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    const names = arr.filter(pet => pet.type)
+        .map(pet => pet.name === 'sassy');
+    return [names];
 }
 
 /*
@@ -157,7 +160,13 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    const goal = arr.map(pet => {
+        return [
+            ['name', pet.name],
+            ['type', pet.type]
+        ];
+    });
+    return goal;
 }
 
 ////////////////////////////////////////////////////////
@@ -186,7 +195,8 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    const cars = arr.filter(car => car.type === 'car');
+    return cars;
 }
 
 /*
