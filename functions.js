@@ -18,7 +18,8 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const names = arr.filter(pet => pet.type === 'dog');
+    return names;
 }
 
 /*
@@ -27,7 +28,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const dogs = arr.filter(pet => pet.type === 'dog')
+        .map(dogs => dogs.name);
+    return dogs;
 }
 
 
@@ -38,7 +41,8 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const names = arr.map(pet => pet.name);
+    return names;
 }
 
 /*
@@ -48,7 +52,8 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const reversed = arr.map(pet => pet.type).reverse(pet => pet.type);
+    return reversed;
 }
 
 /*
@@ -63,7 +68,11 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanish = arr.map(pet => ({
+        nombre: pet.name,
+        tipo: pet.type
+    }));
+    return spanish;
 }
 
 /*
@@ -77,14 +86,14 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return arr.map(item => {
+    return arr.map(item => {
         // here we make a copy of our item. This is to prevent you from mutating the test array.
         const copyOfItem = { ...item };
 
         // do stuff here. If you use mutation, please only mutate the copy. Otherwise you will end up with stateful problems in your tests.
 
         return copyOfItem;
-    })
+    });
 }
 
 /*
@@ -98,7 +107,8 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shout = arr.filter(pet => pet);
+    return shout;
 }
 
 
@@ -122,7 +132,9 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    const names = arr.filter(pet => pet.type)
+        .map(pet => pet.name === 'sassy');
+    return [names];
 }
 
 /*
@@ -148,7 +160,13 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    const goal = arr.map(pet => {
+        return [
+            ['name', pet.name],
+            ['type', pet.type]
+        ];
+    });
+    return goal;
 }
 
 ////////////////////////////////////////////////////////
@@ -177,7 +195,8 @@ Output:
 */
 
 export function getCars(arr) {
-    return [];
+    const cars = arr.filter(car => car.type === 'car');
+    return cars;
 }
 
 /*
