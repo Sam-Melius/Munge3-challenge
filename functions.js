@@ -52,7 +52,8 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const reversed = arr.map(pet => pet.type).reverse(pet => pet.type);
+    return reversed;
 }
 
 /*
